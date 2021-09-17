@@ -1,3 +1,48 @@
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%; /*rem算出をしやすくするために*/
+}
+
+.title {
+  font-size: 2.4rem;
+  margin: 2rem;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+
+  margin: 2rem;
+}
+
 body {
   background-image: linear-gradient(135deg, #fdeb71 10%, #f8d800 100%);
   padding: 4vh;
@@ -5,13 +50,13 @@ body {
 }
 
 .all-wrapper {
-  margin: auto;
+  margin: 2vh auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 70vw;
-  height: 80vh;
+  width: 75vw;
+  height: 85vh;
   background: #fff;
   text-align: center;
   border-radius: 30px;
@@ -27,30 +72,7 @@ body {
   justify-content: start;
   overflow: auto;
   z-index: 10;
-}
-
-.btn,
-a.btn,
-button.btn {
-  margin: 25px;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
+  font-size: 1.6rem;
 }
 
 .btn--yellow {
@@ -60,8 +82,48 @@ button.btn {
 }
 
 .btn--yellow:hover {
-  margin-top: 28px;
+  margin-top: 23px;
   color: #000;
   background: #fff20a;
   border-bottom: 2px solid #ccc100;
+}
+
+.btn-border {
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+
+.btn-border:before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  content: "";
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid #000;
+}
+
+.btn-border:hover:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.button-label {
+  font-size: 1.6rem;
+}
+
+.option-wrapper {
+  padding: 1rem;
+  background-color: rgb(241, 241, 241);
+}
+
+.option-wrapper label {
+  display: block;
+  font-size: 1.6rem;
 }
