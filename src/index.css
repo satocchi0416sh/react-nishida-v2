@@ -42,6 +42,10 @@ html {
   color: rgb(241, 241, 241);
 }
 
+.exp {
+  justify-content: center;
+}
+
 .exp-txt {
   color: rgb(241, 241, 241);
   font-size: 1.6rem;
