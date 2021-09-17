@@ -42,14 +42,11 @@ html {
   color: rgb(241, 241, 241);
 }
 
-.exp {
-  justify-content: center;
-}
-
 .exp-txt {
   color: rgb(241, 241, 241);
   font-size: 1.6rem;
   width: 80vw;
+  margin: 0 auto;
 }
 
 .lets-go {
