@@ -17,6 +17,42 @@ html {
   margin: 2rem;
 }
 
+.bg_img {
+  height: 100%;
+}
+
+.pg-ttl {
+  color: #494949;
+  margin-top: 18vh;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.pg-txt {
+  color: rgb(241, 241, 241);
+  margin-top: 50vh;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.exp-ttl {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 5rem;
+  color: rgb(241, 241, 241);
+}
+
+.exp-txt {
+  color: rgb(241, 241, 241);
+  font-size: 1.6rem;
+  width: 80vw;
+}
+
+.lets-go {
+  font-size: 3.4rem;
+  color: rgb(241, 241, 241);
+}
+
 .btn,
 a.btn,
 button.btn {
@@ -44,9 +80,9 @@ button.btn {
 }
 
 body {
-  background-image: linear-gradient(135deg, #fdeb71 10%, #f8d800 100%);
   padding: 4vh;
   min-height: 100%;
+  background-color: #494949;
 }
 
 .all-wrapper {
