@@ -53,3 +53,13 @@ html {
   font-size: 2.4rem;
   margin: 2rem;
 }
+
+.chart-wrapper {
+  background-color: #494949;
+  height: 50%;
+  width: 100%;
+}
+
+.tr-txt {
+  font-size: 1.6rem;
+}
