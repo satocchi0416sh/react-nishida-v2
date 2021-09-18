@@ -2,8 +2,10 @@ import React from 'react';
 import ApplicationHome from './component/application';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import bg from './assets/app-bg@2x.jpg'
+import { Transition } from 'react-transition-group';
 
 function App() {
+
 
   let page;
 
