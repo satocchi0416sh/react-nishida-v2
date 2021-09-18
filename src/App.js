@@ -30,8 +30,8 @@ function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1}
-          speed={1.5}
+          offset={0.9}
+          speed={0.5}
           style={{
             display: 'flex',
             justifyContent: 'center',
