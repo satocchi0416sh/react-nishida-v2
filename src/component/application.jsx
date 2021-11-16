@@ -39,16 +39,16 @@ function ApplicationHome() {
     const [wifeAfterIncome, setWifeAfterIncome] = useState(0)//<=頭打ち後の年収
     const [wifePension, setWifePension] = useState('')//配偶者の年金
     const [wifeInfo, setWifeInfo] = useState({})//<=推移ページに渡す配偶者の情報が入ったオブジェクト
-    const [pay,setPay] = useState("")
-    const [pay65,setPay65] = useState("")
+    const [pay, setPay] = useState("")
+    const [pay65, setPay65] = useState("")
     /*扶養、支出、その他収入のためのステート*/
     const [huyoList, setHuyoList] = useState([])//<=扶養の情報を保管する
     const [payList, setPayList] = useState([
-        {id: 10000001, type: "living", charge: 0, count: 64, type2: "before"},
-        {id: 10000002, type: "living65", charge:0, count: 65, type2: "after"}
+        { id: 10000001, type: "living", charge: 0, count: 64, type2: "before" },
+        { id: 10000002, type: "living65", charge: 0, count: 65, type2: "after" }
     ])//<=支出の情報を保管する
     const [incomeList, setIncomeList] = useState([])//<=その他収入の情報を保管する
-    const [payOpen,setPayOpen] = useState(false)
+    const [payOpen, setPayOpen] = useState(false)
 
     /*ロードを終了する */
     const quitLoad = () => {
@@ -88,7 +88,7 @@ function ApplicationHome() {
             )
         } else {
             if (Number(age) + Number(year) < 60) {//<=60歳未満だったら年収の分岐が始まる
-                taxIncome=taxIncome1
+                taxIncome = taxIncome1
             } else {
                 taxIncome = taxIncome60//<=60~65だったら60歳の収入を使う
             }
@@ -304,19 +304,19 @@ function ApplicationHome() {
     /*参考計算に必要な４つの情報を入手する */
     const getAllInfo = () => {
         setLoading(true)
-        setPayList(payList=>payList.map((data)=>{
-            if(data.id===10000001){
+        setPayList(payList => payList.map((data) => {
+            if (data.id === 10000001) {
                 console.log("65歳まで")
-                return(
-                    {id: 10000001, type: "living", charge: pay*12, count: 64, type2: "before"}
+                return (
+                    { id: 10000001, type: "living", charge: pay * 12, count: 64, type2: "before" }
                 )
-            }else if(data.id===10000002){
+            } else if (data.id === 10000002) {
                 console.log("65歳から")
-                return(
-                    {id: 10000002, type: "living65", charge: pay65*12, count: 65, type2: "after"}
+                return (
+                    { id: 10000002, type: "living65", charge: pay65 * 12, count: 65, type2: "after" }
                 )
-            }else{
-                return(data)
+            } else {
+                return (data)
             }
         }))
         setCurrentInfo(dicisionInfo(taxIncome, taxIncome60, rate, maxAge1, afterIncome, pension, huyoList, 0, age, 0))//<=参考計算で必要な情報を万能関数から得る
@@ -422,20 +422,20 @@ function ApplicationHome() {
             }
 
         })
-        
+
         Axios.post("https://bright-kurosaki-7872.lolipop.io/sendPay", {
             userId: Number(userId),
-            type: "living", 
-            charge: pay*12, 
-            count: 64, 
+            type: "living",
+            charge: pay * 12,
+            count: 64,
             type2: "before"
         })
 
         Axios.post("https://bright-kurosaki-7872.lolipop.io/sendPay", {
             userId: Number(userId),
-            type: "living65", 
-            charge: pay65*12, 
-            count: 65, 
+            type: "living65",
+            charge: pay65 * 12,
+            count: 65,
             type2: "after"
         })
 
@@ -501,7 +501,7 @@ function ApplicationHome() {
 
     const editIncomeInput = (num, type, charge, count, type2) => {
         setIncomeList(incomeList.map((value) => {
-            console.log(value.id,num)
+            console.log(value.id, num)
             if (value.id === num) {
                 return ({ id: num, type: type, charge: charge, count: count, type2: type2 })
             } else {
@@ -657,7 +657,7 @@ function ApplicationHome() {
                     <FormInput label="月額の見込年金額（万円）" type="number" value={wifePension} onChange={(e) => { setWifePension(e.target.value) }} />
                     <br />
                 </> : null}
-                <br /><br />
+            <br /><br />
             <h2>扶養控除</h2>
             <InputHuyo addHuyoList={addHuyoList} />
             {huyoList.map((value, index) => {
@@ -672,37 +672,37 @@ function ApplicationHome() {
 
             })}
 
-            <br/><br/>
+            <br /><br />
             <h2>支出</h2>
             <FormInput label="65歳までの月々の生活費" type="number" value={pay} onChange={(e) => { setPay(e.target.value) }} />
-            <br/>
-            <FormInput label="65歳移行の月々の生活費" type="number" value={pay65} onChange={(e) => { setPay65(e.target.value) }} />
-            <br/>
+            <br />
+            <FormInput label="65歳以降の月々の生活費" type="number" value={pay65} onChange={(e) => { setPay65(e.target.value) }} />
+            <br />
             {payOpen ?
-            <>
-            <InputPay addPayList={addPayList} />
-            {payList.map((value, index) => {
-                if (value.id !== 0) {
-                    if(value.type !== "living" && value.type !== "living65"){
-                        return (
-                            <Pay key={index} number={value.id} deletePayInput={deletePayInput}
-                                type={value.type} charge={value.charge} count={value.count} type2={value.type2} editPayInput={editPayInput} />
-                        )
-                    }else{
-                        return(null)
-                    }
-                    
-                } else {
-                    return (null)
-                }
-            })}
-            </>
-            :
-            <div className="btn-wrapper">
-                <button className="btn btn--white" onClick={() => { setPayOpen(true) }}>さらに詳しく支出を設定する</button>
-            </div>
+                <>
+                    <InputPay addPayList={addPayList} />
+                    {payList.map((value, index) => {
+                        if (value.id !== 0) {
+                            if (value.type !== "living" && value.type !== "living65") {
+                                return (
+                                    <Pay key={index} number={value.id} deletePayInput={deletePayInput}
+                                        type={value.type} charge={value.charge} count={value.count} type2={value.type2} editPayInput={editPayInput} />
+                                )
+                            } else {
+                                return (null)
+                            }
+
+                        } else {
+                            return (null)
+                        }
+                    })}
+                </>
+                :
+                <div className="btn-wrapper">
+                    <button className="btn btn--white" onClick={() => { setPayOpen(true) }}>さらに詳しく支出を設定する</button>
+                </div>
             }
-            <br/><br/>
+            <br /><br />
             <h2>給与以外の収入</h2>
             <InputIncome addIncomeList={addIncomeList} />
             {incomeList.map((value, index) => {

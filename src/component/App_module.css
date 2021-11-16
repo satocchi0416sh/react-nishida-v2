@@ -11,6 +11,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .btn,
 a.btn,
 button.btn {
@@ -50,7 +55,6 @@ button.btn {
 }
 
 body {
-  padding: 4vh;
   min-height: 100%;
   background-color: #494949;
   font-family: "メイリオ", Meiryo, "ヒラギノ丸ゴ ProN",
@@ -76,8 +80,8 @@ body {
 @media screen and (max-width: 600px) {
   .all-wrapper {
     padding: 0;
-    width: 100vw;
-    height: 100%;
+    width: 99vw;
+    height: 95vh;
   }
 }
 

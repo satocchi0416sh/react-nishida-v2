@@ -1,6 +1,6 @@
 {
   "name": "react-nishida-v1",
-  "homepage": "https://satocchi0416sh.github.io/react-nishida-app/",
+  "homepage": "https://satocchi0416sh.github.io/react-nishida-v2/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "material-table": "^1.69.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-responsive": "^9.0.0-beta.4",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",
     "react-spring": "^9.2.4",
