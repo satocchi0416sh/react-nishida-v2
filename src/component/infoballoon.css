@@ -1,0 +1,103 @@
+.cp_tooltip {
+  
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  left: 100%;
+}
+
+.cp_tooltip .cp_tooltiptext {
+  position: absolute;
+  z-index: 20;
+  top: -5px;
+  right: 150%;
+  visibility: hidden;
+  /*width: auto;*/
+  padding: 0.3em 0.5em;
+  transition: opacity 1s;
+  text-align: left;
+  opacity: 0;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #1b2538;
+  font-size: 1.2rem;
+  width: 30vw;
+}
+
+@media screen and (max-width: 500px) {
+  .cp_tooltip {
+    left: 85%;
+  }
+
+  .cp_tooltip .cp_tooltiptext {
+    font-size: 1rem;
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fa-info-circle {
+    font-size: 3rem;
+  }
+}
+
+.cp_tooltip .cp_tooltiptext::after {
+  position: absolute;
+  top: 10%;
+  left: 104%;
+  margin-left: -12px;
+  content: " ";
+  border: 5px solid transparent;
+  border-left-color: #1b2538;
+}
+.cp_tooltip:hover .cp_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ボタンつき */
+
+.huyo-wrapper .cp_tooltip {
+  margin: 0 0 0 auto;
+  display: inline-block;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+.huyo-wrapper .cp_tooltip .cp_tooltiptext {
+  position: absolute;
+  z-index: 20;
+  top: -5px;
+  right: 150%;
+  visibility: hidden;
+  /*width: auto;*/
+  padding: 0.3em 0.5em;
+  transition: opacity 1s;
+  text-align: left;
+  opacity: 0;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #1b2538;
+  font-size: 1.2rem;
+  width: 30vw;
+}
+
+@media screen and (max-width: 500px) {
+  .huyo-wrapper .cp_tooltip .cp_tooltiptext {
+    font-size: 1rem;
+    width: 50vw;
+  }
+}
+
+.huyo-wrapper .cp_tooltip .cp_tooltiptext::after {
+  position: absolute;
+  top: 10%;
+  left: 104%;
+  margin-left: -12px;
+  content: " ";
+  border: 5px solid transparent;
+  border-left-color: #1b2538;
+}
+.huyo-wrapper .cp_tooltip:hover .cp_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

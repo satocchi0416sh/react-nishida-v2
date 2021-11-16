@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ApplicationHome from './component/application';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import bg from './assets/app-bg@2x.jpg'
-import { Transition } from 'react-transition-group';
 
 function App() {
+
+  const parallax = useRef(null)
+
+  const scroll = (to) => {
+    if (parallax.current) {
+      parallax.current.scrollTo(to)
+      console.log(`scroll to ${to}`)
+    }
+  }
 
 
   let page;
@@ -13,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Parallax pages={3} style={{ top: '0', left: '0' }}>
+      <Parallax pages={3} ref={parallax} style={{ top: '0', left: '0' }}>
         <ParallaxLayer
           offset={0}
           speed={0.5}
@@ -24,6 +32,7 @@ function App() {
         <ParallaxLayer
           offset={0}
           speed={2}
+          onClick={() => scroll(0.7)}
         >
           <h2 className="pg-ttl">ようこそライフシミュレーションへ</h2>
           <div className="pg-txt"><i class="fas fa-hand-point-down"></i> スクロール</div>
@@ -36,7 +45,8 @@ function App() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          onClick={() => scroll(1.3)}>
           <div className="exp">
             <h1 className="exp-ttl">ライフシミュレーションとは</h1>
             <p className="exp-txt">
@@ -53,8 +63,6 @@ function App() {
               <br />
               ・ブラウザの「戻る」ボタンは使わないでください。（システムの下にある「戻る」ボタンをご利用ください）
               <br />
-              <br />
-              ・フォーム入力が完了した際、「次へ」ボタンを押す前に必ず「確定」ボタンを押してください。
             </p>
           </div>
         </ParallaxLayer>
@@ -67,6 +75,7 @@ function App() {
             justifyContent: 'center',
             alignItems: 'center',
           }}
+          onClick={() => scroll(2)}
         >
           <h2 className="lets-go">さあはじめましょう</h2>
         </ParallaxLayer>
@@ -80,7 +89,8 @@ function App() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+          onClick={() => scroll(2)} >
           {page}
         </ParallaxLayer>
       </Parallax>

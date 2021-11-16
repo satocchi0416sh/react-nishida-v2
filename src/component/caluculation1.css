@@ -1,0 +1,24 @@
+.t {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.t th,
+.t td {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.t tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.t-label {
+  font-size: 2.4rem;
+  margin: 30px;
+}
+
+h1 {
+  font-size: 2.4rem;
+}

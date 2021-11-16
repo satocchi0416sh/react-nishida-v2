@@ -1,0 +1,35 @@
+.tr-contents {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow: auto;
+  z-index: 10;
+}
+
+.chart-wrapper {
+  background-color: #494949;
+  height: 50%;
+  width: 100%;
+}
+
+.tr-txt {
+  margin: 5rem auto;
+  font-size: 1.6rem;
+}
+
+.loading{
+  width:60%;
+  max-width: 400px;
+  margin:0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.loading img{
+  width:100%;
+}
+
+.loading p{
+  font-size: 20px;
+}
