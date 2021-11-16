@@ -102,20 +102,23 @@ function App() {
       <MediaQuery maxWidth={600}>
         <div className="phone-wrapper">
           <div className="hero-section">
+            <img src={bg} alt="ライフシミュレーション" />
             <h1>ようこそライフシミュレーションへ</h1>
           </div>
-          <div className="description">
-            <h2>ライフシミュレーションとは</h2>
-            <p>あなたの年収、現在貯蓄額や支出からあなたの資産がどのように推移するのかをシミュレートします。</p>
-            <p>以下のフォームにあなたの情報を入力することでわかりやすいグラフで資産推移を表現します。</p>
-            <h2><i class="fas fa-exclamation-circle" />注意事項</h2>
-            <p>ブラウザの「戻る」ボタンは使わないでください。（システムの下にある「戻る」ボタンをご利用ください）</p>
-          </div>
-          <div className="lets-go-txt">
-            <h2>さあはじめましょう</h2>
-          </div>
-          <div className="main">
-            {page}
+          <div className="p-contents">
+            <div className="description">
+              <h2>ライフシミュレーションとは</h2>
+              <p>あなたの年収、現在貯蓄額や支出からあなたの資産がどのように推移するのかをシミュレートします。</p>
+              <p>以下のフォームにあなたの情報を入力することでわかりやすいグラフで資産推移を表現します。</p>
+              <h2><i class="fas fa-exclamation-circle" />注意事項</h2>
+              <p>ブラウザの「戻る」ボタンは使わないでください。（システムの下にある「戻る」ボタンをご利用ください）</p>
+            </div>
+            <div className="lets-go-txt">
+              <h2>さあはじめましょう</h2>
+            </div>
+            <div className="main">
+              {page}
+            </div>
           </div>
         </div>
       </MediaQuery>
