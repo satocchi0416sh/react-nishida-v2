@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/react-nishida-v2/static/css/main.0714e3b5.chunk.css",
+    "main.js": "/react-nishida-v2/static/js/main.253a052c.chunk.js",
+    "main.js.map": "/react-nishida-v2/static/js/main.253a052c.chunk.js.map",
+    "runtime-main.js": "/react-nishida-v2/static/js/runtime-main.0956a9d9.js",
+    "runtime-main.js.map": "/react-nishida-v2/static/js/runtime-main.0956a9d9.js.map",
+    "static/js/2.efd62da5.chunk.js": "/react-nishida-v2/static/js/2.efd62da5.chunk.js",
+    "static/js/2.efd62da5.chunk.js.map": "/react-nishida-v2/static/js/2.efd62da5.chunk.js.map",
+    "static/js/3.7f7439fc.chunk.js": "/react-nishida-v2/static/js/3.7f7439fc.chunk.js",
+    "static/js/3.7f7439fc.chunk.js.map": "/react-nishida-v2/static/js/3.7f7439fc.chunk.js.map",
+    "static/js/4.51911b8f.chunk.js": "/react-nishida-v2/static/js/4.51911b8f.chunk.js",
+    "static/js/4.51911b8f.chunk.js.map": "/react-nishida-v2/static/js/4.51911b8f.chunk.js.map",
+    "static/js/5.f0850e75.chunk.js": "/react-nishida-v2/static/js/5.f0850e75.chunk.js",
+    "static/js/5.f0850e75.chunk.js.map": "/react-nishida-v2/static/js/5.f0850e75.chunk.js.map",
+    "static/js/6.e46ea6b1.chunk.js": "/react-nishida-v2/static/js/6.e46ea6b1.chunk.js",
+    "static/js/6.e46ea6b1.chunk.js.map": "/react-nishida-v2/static/js/6.e46ea6b1.chunk.js.map",
+    "index.html": "/react-nishida-v2/index.html",
+    "static/css/main.0714e3b5.chunk.css.map": "/react-nishida-v2/static/css/main.0714e3b5.chunk.css.map",
+    "static/js/2.efd62da5.chunk.js.LICENSE.txt": "/react-nishida-v2/static/js/2.efd62da5.chunk.js.LICENSE.txt",
+    "static/js/3.7f7439fc.chunk.js.LICENSE.txt": "/react-nishida-v2/static/js/3.7f7439fc.chunk.js.LICENSE.txt",
+    "static/js/4.51911b8f.chunk.js.LICENSE.txt": "/react-nishida-v2/static/js/4.51911b8f.chunk.js.LICENSE.txt",
+    "static/js/5.f0850e75.chunk.js.LICENSE.txt": "/react-nishida-v2/static/js/5.f0850e75.chunk.js.LICENSE.txt",
+    "static/media/76888-color-data-analysis.540e95fe.gif": "/react-nishida-v2/static/media/76888-color-data-analysis.540e95fe.gif",
+    "static/media/app-bg@2x.39bf29a7.jpg": "/react-nishida-v2/static/media/app-bg@2x.39bf29a7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0956a9d9.js",
+    "static/js/2.efd62da5.chunk.js",
+    "static/css/main.0714e3b5.chunk.css",
+    "static/js/main.253a052c.chunk.js"
+  ]
+}
